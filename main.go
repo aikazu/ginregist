@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	controller "github.com/aikazu/ginregist"
 )
 
 var router *gin.Engine
