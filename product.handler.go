@@ -11,7 +11,7 @@ func showIndexPage(c *gin.Context) {
 	products := getAllProducts()
 
 	render(c, gin.H{
-		"title":   "Agritek Gin",
+		"title":   "Artikel Produk",
 		"payload": products}, "index.html")
 }
 
