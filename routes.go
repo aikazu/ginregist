@@ -19,12 +19,12 @@ func initializeRoutes() {
 		userRoutes.POST("/register", ensureNotLoggedIn(), register)
 	}
 
-	articleRoutes := router.Group("/article")
+	productRoutes := router.Group("/product")
 	{
-		articleRoutes.GET("/view/:article_id", getArticle)
+		productRoutes.GET("/view/:product_id", getProduct)
 
-		articleRoutes.GET("/create", ensureLoggedIn(), showArticleCreationPage)
+		productRoutes.GET("/create", ensureLoggedIn(), showProductCreationPage)
 
-		articleRoutes.POST("/create", ensureLoggedIn(), createArticle)
+		productRoutes.POST("/create", ensureLoggedIn(), createProduct)
 	}
 }
